@@ -1,0 +1,33 @@
+[
+  { 
+    "id": 1, 
+    "title": "Chicken Adobo", 
+    "image": "chicken-adobo.jpg",
+    "link": "https://panlasangpinoy.com/filipino-chicken-adobo-recipe/", 
+    "ingredients": [
+      "2 lbs chicken cut into serving pieces",
+      "3 pieces dried bay leaves",
+      "8 tablespoons soy sauce",
+      "4 tablespoons white vinegar",
+      "5 cloves garlic crushed",
+      "1 1/2 cups water",
+      "3 tablespoons cooking oil",
+      "1 teaspoon sugar",
+      "1/4 teaspoon salt optional",
+      "1 teaspoon whole peppercorn"
+    ],
+    "description": "",
+    "favs": 5,
+    "views": 100
+  },
+  { 
+    "id": 2, 
+    "title": "Ginataang Gulay with Tofu and Shrimp", 
+    "image": "Ginataang-Gulay-with-Shrimp.jpg",
+    "ingredients": [],
+    "link": "https://panlasangpinoy.com/healthy-ginataang-gulay-with-tofu-and-shrimp/",
+    "description": "Before we start picking and cooking our food, we usually ask ourselves what’s best for our appetite. But of course, we also have to think about how the chosen dish would benefit our bodies. That’s why it is good to have a menu of healthy options in our head for when we wonder what to create in the kitchen. A good choice to always have in mind? A healthy and delicious ginataang gulay recipe!",
+    "favs": 5,
+    "views": 100
+  }
+]
