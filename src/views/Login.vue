@@ -1,13 +1,29 @@
 <script>
+import Validation from '@/Validation';
+import User from '@/datastore/User';
+
 export default {
   data() {
     return {
-      bgColor: 'red'
+      email: '',
+      password: '',
+      errorMsg: ''
     }
   },
   computed:{
     bgImage(){
       return `url(${require('../assets/images/bg.png')})`
+    }
+  },
+  methods:{
+    submitForm(){
+      this.errorMsg = ''
+      if(!User.login(this.email, this.password)){
+        this.errorMsg = 'Incorrect Email or Password';
+        return;
+      }
+
+      this.$router.push({ name: 'home' })
     }
   }
 }
@@ -17,26 +33,27 @@ export default {
 <template>
   <div id="login-page" style="height: 100vh" class="flex justify-center">
     <div style="width: 600px;margin: 0 auto;height: auto;"
-      class="bg-[#ffffffb2] shadow-lg rounded px-8 pt-6 pb-8 mb-4 self-center">
+      class="bg-white shadow-lg rounded px-8 pt-6 pb-8 mb-4 self-center">
       <h1 class="text-3xl text-center mb-4">Sign In</h1>
-      <form>
+      <form @submit.prevent="submitForm">
         <div class="mb-4">
           <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
             Email
           </label>
-          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="email" type="email"
+          <input v-model="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="email" type="email"
             placeholder="Email">
         </div>
-        <div class="mb-6">
+        <div>
           <label class="block text-grey-darker text-sm font-bold mb-2" for="password">
             Password
           </label>
-          <input class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3"
+          <input v-model="password" class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3"
             id="password" type="password" placeholder="******************">
           <!-- <p class="text-red text-xs italic">Please choose a password.</p> -->
         </div>
+        <div v-if="errorMsg" class="text-red-500 my-4">{{ errorMsg }}</div>
         <div class="flex items-center justify-between">
-          <button class="bg-blue-500 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded" type="button">
+          <button class="bg-blue-500 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded" type="submit">
             Sign In
           </button>
           <a class="inline-block align-baseline font-bold text-sm text-blue hover:text-blue-darker" href="#">

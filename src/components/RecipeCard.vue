@@ -9,6 +9,12 @@ export default {
   },
   computed: {
     image() {
+      if(!this.data.image) return undefined;
+
+      if(this.data.image.includes('data:image')){
+        return this.data.image;
+      }
+      
       return require(`../assets/images/${this.data.image}`)
     }
   }
@@ -27,22 +33,19 @@ export default {
         </div>
       </div>
     </router-link>
-    <div class="p-3" v-if="data.link"><a class="text-blue-600" :href="data.link">{{ data.link }}</a></div>
+    <div class="self-baseline p-3" v-if="data.source">source: <a class="text-blue-600" :href="data.source">{{ data.source }}</a></div>
     <div class="flex items-center w-full p-3">
       <div class="favorite-count">
-        <font-awesome-icon icon="heart" class="text-red-500" /> <span class="ml-2">{{ data.favs }}</span>
+        <font-awesome-icon icon="heart" class="text-red-500" /> <span class="ml-2">{{ data.favs.length }}</span>
       </div>
       <div class="view-count ml-4">
-        <font-awesome-icon icon="eye" /> <span class="ml-2">{{ data.views }}</span>
+        <font-awesome-icon icon="eye" /> <span class="ml-2">{{ data.views.length }}</span>
       </div>
     </div>
   </div>
 </template>
 
 <style>
-#recommended {
-  height: calc(100vh - 56px);
-}
 
 /* .recipe-item {
   height: 200px;
@@ -59,7 +62,7 @@ export default {
 
 .recipe-item h5 {
   position: absolute;
-  background-color: rgba(180, 180, 180, 0.55);
+  background-color: rgba(180, 180, 180, 0.74);
   width: 100%;
   padding: 10px;
 }

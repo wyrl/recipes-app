@@ -3,12 +3,24 @@ import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import RecipeInfo from '../views/RecipeInfo.vue'
 import Signup from '../views/Signup.vue'
+import RecipeForm from '@/views/RecipeForm.vue'
+import RecipeList from '@/views/RecipeList.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
     component: Home
+  },
+  {
+    path: '/recipe',
+    name: 'recipe-list',
+    component: RecipeList
+  },
+  {
+    path: '/recipe/new',
+    name: 'recipe-new',
+    component: RecipeForm
   },
   {
     path: '/recipe/:id',

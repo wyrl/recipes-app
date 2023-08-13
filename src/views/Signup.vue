@@ -1,5 +1,6 @@
 <script>
 import Validation from '@/Validation';
+import User from '@/datastore/User'
 
 export default {
   computed: {
@@ -19,12 +20,15 @@ export default {
   },
   methods: {
     submitForm() {
+      this.isRegistered = false
       if (this.checkValidation()) {
+        const user = new User(this.firstname.field, this.lastname.field, this.email.field, this.password.field);
+        User.save(user)
+        this.isRegistered = true
         this.resetFields()
       }
     },
     checkValidation() {
-      // const commonRules = ['required'];
       let valid = true
 
       if(!this.firstname.valid()){
@@ -36,6 +40,12 @@ export default {
       }
 
       if(!this.email.valid()){
+        valid = false
+      }
+
+      if(User.getUserByEmail(this.email.field)){
+        this.email.error = true
+        this.email.errorMsg = "Your email has already been used."
         valid = false
       }
 
@@ -119,7 +129,7 @@ export default {
           <button class="bg-blue-500 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded w-[100px] mr-4">
             Sign Up
           </button>
-          <h3 class=""><span class="text-green-500">Congratulations! You've registered</span>. Now, click <router-link :to="{name: 'signin'}" class="text-blue-500">login</router-link> to check if exists.</h3>
+          <h3 v-if="isRegistered"><span class="text-green-500">Congratulations! You've registered</span>. Now, click <router-link :to="{name: 'signin'}" class="text-blue-500">login</router-link> to check if exists.</h3>
           <!-- <a class="inline-block align-baseline font-bold text-sm text-blue hover:text-blue-darker" href="#">
             Forgot Password?
           </a> -->

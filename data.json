@@ -1,9 +1,10 @@
 [
   { 
-    "id": 1, 
+    "id": 1,
+    "userId" : -1, 
     "title": "Chicken Adobo", 
     "image": "chicken-adobo.jpg",
-    "link": "https://panlasangpinoy.com/filipino-chicken-adobo-recipe/", 
+    "source": "https://panlasangpinoy.com/filipino-chicken-adobo-recipe/", 
     "ingredients": [
       "2 lbs chicken cut into serving pieces",
       "3 pieces dried bay leaves",
@@ -16,18 +17,69 @@
       "1/4 teaspoon salt optional",
       "1 teaspoon whole peppercorn"
     ],
-    "description": "",
-    "favs": 5,
-    "views": 100
+    "description": "Chicken Adobo is an authentic Filipino dish and is one of the mostly recognized Filipino foods. Not to be mistaken with Mexican adobo, this dish is uniquely prepared by stewing chicken in vinegar and soy sauce. Several sources who are experts in Asian food history say that the Filipinos were already cooking adobo even before Spanish colonization. According to them, cooking with vinegar preserves the meat. This method is also considered as one of the earliest food preservation practice.",
+    "favs": [1, 2, 3, 4, 5],
+    "views": [1, 2, 3, 4, 5]
   },
   { 
-    "id": 2, 
+    "id": 2,
+    "userId" : -1, 
     "title": "Ginataang Gulay with Tofu and Shrimp", 
     "image": "Ginataang-Gulay-with-Shrimp.jpg",
     "ingredients": [],
-    "link": "https://panlasangpinoy.com/healthy-ginataang-gulay-with-tofu-and-shrimp/",
+    "source": "https://panlasangpinoy.com/healthy-ginataang-gulay-with-tofu-and-shrimp/",
     "description": "Before we start picking and cooking our food, we usually ask ourselves what’s best for our appetite. But of course, we also have to think about how the chosen dish would benefit our bodies. That’s why it is good to have a menu of healthy options in our head for when we wonder what to create in the kitchen. A good choice to always have in mind? A healthy and delicious ginataang gulay recipe!",
-    "favs": 5,
-    "views": 100
+    "favs": [1,2,3,4,5],
+    "views": [1, 2, 3, 4, 5]
+  },
+  { 
+    "id": 3,
+    "userId" : -1, 
+    "title": "Easy Pata Tim (Ham Hock Recipe)", 
+    "image": "easy-pata-tim-730x1095.webp",
+    "ingredients": [
+      "4 lbs pork leg",
+      "1 Knorr Pork Cube",
+      "1 bunch baby bok choy",
+      "10 Shiitake mushroom",
+      "1 carrot sliced crosswise",
+      "4 tablespoons brown sugar",
+      "1 teaspoon sesame oil",
+      "4 tablespoons soy sauce",
+      "1 tablespoon cornstarch",
+      "1 star anise",
+      "2 bay leaves",
+      "2 teaspoons whole peppercorn",
+      "3 cloves garlic minced",
+      "1 onion chopped",
+      "8 cups water",
+      "3 tablespoons cooking oil"
+    ],
+    "source": "https://panlasangpinoy.com/easy-pata-tim-ham-hock-recipe/",
+    "description": "Undoubtedly one of the most popular pork cuts in Filipino cuisine, there’s nothing you can’t do with a good piece of ham hock, or pata. It has a delicious amount of skin and fat. This cut of pork, when cooked perfectly, can be one of the most indulgent parts of the pig you’ll ever have. Pata is hearty and versatile, with so many different ways you can enjoy it. However, for beginner chefs, the sight of this portion of meat may seem rather intimidating. Worry not; one of the most popular ways you can cook pata also happens to be one of the easiest. That’s right — we’re talking about Filipino-Chinese classic, pata tim! ",
+    "favs": [1,2,3,4,5],
+    "views": [1, 2, 3, 4, 5]
+  },
+  { 
+    "id": 3,
+    "userId" : -1, 
+    "title": "Bicol Express Recipe", 
+    "image": "Pork-Bicol-Express-Recipe.jpg",
+    "ingredients": [
+      "2 lbs. pork belly sliced into strips",
+      "2 cups coconut milk",
+      "2 cups coconut cream",
+      "1/2 cup shrimp paste bagoong alamang",
+      "4 cloves garlic crushed",
+      "6 pieces Thai chili pepper chopped",
+      "1 thumb ginger minced",
+      "1 piece onion chopped",
+      "1 pieces Serrano pepper sliced",
+      "1 cup water optional"
+    ],
+    "source": "https://panlasangpinoy.com/bicol-express/",
+    "description": "The mild sweetness of coconut milk brings a sense of delight to the sharp notes of chili pepper and bagoong in the classic Bicol Express recipe. This contrast has long created a spell-binding richness in taste for the dish. And this has helped make it arguably one of the most popular Filipino dishes.",
+    "favs": [1,2,3,4,5],
+    "views": [1, 2, 3, 4, 5]
   }
 ]
