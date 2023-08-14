@@ -23,7 +23,7 @@ export default {
 
 
 <template>
-  <div class="recipe-item bg-white rounded shadow border flex flex-col items-center">
+  <div class="recipe-item bg-white rounded shadow border flex flex-col">
     <router-link class="w-full" :to="{ name: 'recipe-info', params: { id: data.id } }">
       <div class="image-box w-full h-full">
         <h5 class="text-3xl font-bold mb-4 mt-0">{{ data.title }}</h5>
@@ -33,7 +33,9 @@ export default {
         </div>
       </div>
     </router-link>
-    <div class="self-baseline p-3" v-if="data.source">source: <a class="text-blue-600" :href="data.source">{{ data.source }}</a></div>
+    <div class="self-baseline p-3 flex-1 min-w-0 w-full" v-if="data.source">
+      source: <a class="text-blue-600 block whitespace-nowrap overflow-hidden text-ellipsis" :href="data.source">{{ data.source }}</a>
+    </div>
     <div class="flex items-center w-full p-3">
       <div class="favorite-count">
         <font-awesome-icon icon="heart" class="text-red-500" /> <span class="ml-2">{{ data.favs.length }}</span>

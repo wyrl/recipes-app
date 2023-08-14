@@ -68,7 +68,7 @@ export default {
 
 <template>
   <Header :back-action="true" />
-  <div class="container mx-auto p-10">
+  <div class="container mx-auto">
     <div class="flex flex-col items-center justify-center">
       <h2 class="text-3xl font-bold text-center mt-10 mb-4">{{ recipeInfo.title }} </h2>
       <div class="mb-4">
@@ -78,8 +78,8 @@ export default {
         <span class="ml-5 text-2xl"><font-awesome-icon icon="fa-solid fa-eye" /> {{ this.recipeInfo.viewCount() }}</span>
       </div>
     </div>
-    <div class="flex">
-      <img class="w-[600px] h-auto" :src="image" />
+    <div class="md:flex">
+      <img class="lg:w-[600px] md:w-[350px] sm:w-[350px] sm:mx-auto mb-10 mt-4 max-w-[250px] mx-auto h-auto" :src="image" />
       <div class="ml-4">
         <div v-if="recipeInfo.ingredients && recipeInfo.ingredients.length != 0" class="mb-4">
           <h3 class="text-2xl font-bold my-3">Ingredients:</h3>

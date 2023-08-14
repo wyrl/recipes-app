@@ -1,7 +1,7 @@
 <template>
-    <div id="bg" style="min-height: 100vh" class="flex justify-center">
-        <div style="width: 600px;margin: 0 auto;height: auto;"
-            class="bg-white shadow-lg rounded px-8 pt-6 pb-8 mb-4 self-center">
+    <div id="bg" style="min-height: 100vh" class="flex justify-center md:bg-cover md:bg-no-repeat bg-[length:100%_auto] bg-repeat">
+        <div style="width: 600px;height: auto;"
+            class="bg-[#ffffffe3] shadow-lg rounded px-8 pt-6 pb-8 mb-4 mx-4 self-center">
             <h1 class="text-3xl text-center mb-4">New Recipe</h1>
             <form @submit.prevent="submitForm">
                 <div class="mb-4">
@@ -90,7 +90,7 @@ export default {
     },
     computed: {
         bgImage() {
-            return `url(${require('../assets/images/bg.png')})`
+            return `url(${require('../assets/images/bg2.png')})`
         }
     },
     methods: {
@@ -168,8 +168,5 @@ export default {
 <style scoped>
 #bg {
     background-image: v-bind("bgImage");
-    background-size: 100% auto;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 </style>
