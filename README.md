@@ -19,7 +19,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-You can place this text in a file named LICENSE in your project's root directory. Remember to also provide proper attribution and comply with any other licenses or terms if your project includes content or code from other sources. If you have specific legal requirements or if you're unsure about licensing, it's recommended to consult legal experts.
 
 ## Attribution
 
