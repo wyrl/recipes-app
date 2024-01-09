@@ -1,6 +1,6 @@
 <script>
 import Validation from '@/Validation';
-import User from '@/datastore/User'
+import User from '@/data-store/User'
 
 export default {
   computed: {
@@ -31,40 +31,40 @@ export default {
     checkValidation() {
       let valid = true
 
-      if(!this.firstname.valid()){
+      if (!this.firstname.valid()) {
         valid = false
       }
 
-      if(!this.lastname.valid()){
+      if (!this.lastname.valid()) {
         valid = false
       }
 
-      if(!this.email.valid()){
+      if (!this.email.valid()) {
         valid = false
       }
 
-      if(User.getUserByEmail(this.email.field)){
+      if (User.getUserByEmail(this.email.field)) {
         this.email.error = true
         this.email.errorMsg = "Your email has already been used."
         valid = false
       }
 
-      if(!this.password.valid()){
+      if (!this.password.valid()) {
         valid = false
       }
 
-      if(!this.confirmPassword.valid(this.password.field)){
+      if (!this.confirmPassword.valid(this.password.field)) {
         valid = false
       }
 
       return valid;
     },
-    resetFields(){
-      [ this.firstname, 
-        this.lastname, 
-        this.email, 
-        this.password, 
-        this.confirmPassword ].forEach((validation) => validation.reset())
+    resetFields() {
+      [this.firstname,
+      this.lastname,
+      this.email,
+      this.password,
+      this.confirmPassword].forEach((validation) => validation.reset())
     }
   }
 }
@@ -72,9 +72,9 @@ export default {
 
 
 <template>
-  <div id="signup-page" style="height: 100vh" class="flex justify-center md:bg-cover md:bg-no-repeat bg-[length:100%_auto] bg-repeat">
-    <div style="width: 600px;height: auto;"
-      class="bg-[#ffffffe3] shadow-lg rounded px-8 pt-6 pb-8 mb-4 mx-4 self-center">
+  <div id="signup-page" style="height: 100vh"
+    class="flex justify-center md:bg-cover md:bg-no-repeat bg-[length:100%_auto] bg-repeat">
+    <div style="width: 600px;height: auto;" class="bg-[#ffffffe3] shadow-lg rounded px-8 pt-6 pb-8 mb-4 mx-4 self-center">
       <h1 class="text-3xl text-center mb-4">Sign In</h1>
       <form @submit.prevent="submitForm">
         <div class="grid grid-cols-2 gap-5 mb-4">
@@ -129,7 +129,9 @@ export default {
           <button class="bg-blue-500 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded w-[100px] mr-4">
             Sign Up
           </button>
-          <h3 v-if="isRegistered"><span class="text-green-500">Congratulations! You've registered</span>. Now, click <router-link :to="{name: 'signin'}" class="text-blue-500">login</router-link> to check if exists.</h3>
+          <h3 v-if="isRegistered"><span class="text-green-500">Congratulations! You've registered</span>. Now, click
+            <router-link :to="{ name: 'signin' }" class="text-blue-500">login</router-link> to check if exists.
+          </h3>
           <!-- <a class="inline-block align-baseline font-bold text-sm text-blue hover:text-blue-darker" href="#">
             Forgot Password?
           </a> -->
@@ -146,4 +148,4 @@ export default {
 #signup-page {
   background-image: v-bind("bgImage");
 }
-</style>
+</style>@/data-store/User

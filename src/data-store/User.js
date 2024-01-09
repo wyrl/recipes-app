@@ -2,7 +2,7 @@ import {
   KEY_USER_DATA,
   KEY_USER_LAST_ID,
   KEY_USER_LOGGED_IN
-} from './dataConfig';
+} from './data-config';
 
 export default class User {
   id = 0
@@ -58,20 +58,20 @@ export default class User {
     return undefined
   }
 
-  static removeUserLogged(){
+  static removeUserLogged() {
     localStorage.removeItem(KEY_USER_LOGGED_IN);
   }
 
-  static generateNewId(){
+  static generateNewId() {
     const newId = User.getLastId() + 1;
     localStorage.setItem(KEY_USER_LAST_ID, newId);
     return newId;
   }
 
-  static getLastId(){
+  static getLastId() {
     const lastId = localStorage.getItem(KEY_USER_LAST_ID);
 
-    if(!lastId){
+    if (!lastId) {
       return 0;
     }
 

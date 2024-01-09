@@ -1,4 +1,4 @@
-import { KEY_RECIPE_DATA, KEY_RECIPE_LAST_ID } from "./dataConfig.js";
+import { KEY_RECIPE_DATA, KEY_RECIPE_LAST_ID } from "./data-config.js";
 
 export default class Recipe {
   id = undefined;
@@ -13,28 +13,28 @@ export default class Recipe {
     this.ingredients = ingredients;
   }
 
-  isUserViewExists(userId){
+  isUserViewExists(userId) {
     return this.views.indexOf(userId) != -1;
   }
 
-  isUserFavExists(userId){
+  isUserFavExists(userId) {
     return this.favs.indexOf(userId) != -1;
   }
 
-  removeUserFav(userId){
+  removeUserFav(userId) {
     this.favs = this.favs
       .filter((uId) => uId != userId)
   }
 
-  addUserFav(userId){
+  addUserFav(userId) {
     this.favs.push(userId);
   }
 
-  favCount(){
+  favCount() {
     return this.favs.length;
   }
 
-  viewCount(){
+  viewCount() {
     return this.views.length;
   }
 
@@ -46,17 +46,17 @@ export default class Recipe {
     localStorage.setItem(KEY_RECIPE_DATA, JSON.stringify(recipeList));
   }
 
-  static update(recipe){
+  static update(recipe) {
     const recipeList = Recipe.getRecipeList().map((r) => r.id == recipe.id ? recipe : r);
     localStorage.setItem(KEY_RECIPE_DATA, JSON.stringify(recipeList));
   }
 
-  static getRecipesByUserId(userId){
+  static getRecipesByUserId(userId) {
     const recipeList = Recipe.getRecipeList();
     return recipeList.filter((recipe) => recipe.userId == userId);
   }
 
-  static getRecipeById(id){
+  static getRecipeById(id) {
     const recipeList = Recipe.getRecipeList();
     return recipeList.filter((recipe) => recipe.id == id)[0];
   }

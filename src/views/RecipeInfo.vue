@@ -1,8 +1,8 @@
 <script>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
-import Recipe from '@/datastore/Recipe';
-import User from '@/datastore/User';
+import Recipe from '@/data-store/Recipe';
+import User from '@/data-store/User';
 
 export default {
   components: {
@@ -78,9 +78,10 @@ export default {
         <span class="ml-5 text-2xl"><font-awesome-icon icon="fa-solid fa-eye" /> {{ this.recipeInfo.viewCount() }}</span>
       </div>
     </div>
-    <div class="md:flex">
-      <img class="lg:w-[600px] md:w-[350px] sm:w-[350px] sm:mx-auto mb-10 mt-4 max-w-[250px] mx-auto h-auto" :src="image" />
-      <div class="ml-4">
+    <div class="md:flex md:px-10 px-5">
+      <img class="lg:w-[600px] md:w-[350px] sm:w-[350px] sm:mx-auto mb-10 mt-4 max-w-[250px] mx-auto h-auto"
+        :src="image" />
+      <div class="md:ml-4">
         <div v-if="recipeInfo.ingredients && recipeInfo.ingredients.length != 0" class="mb-4">
           <h3 class="text-2xl font-bold my-3">Ingredients:</h3>
           <ul class="ingredients">
@@ -106,4 +107,4 @@ export default {
 .ingredients input[type=checkbox]:checked~label {
   text-decoration: line-through;
 }
-</style>
+</style>@/data-store/Recipe@/data-store/User

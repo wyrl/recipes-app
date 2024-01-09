@@ -1,5 +1,6 @@
 <template>
-    <div id="bg" style="min-height: 100vh" class="flex justify-center md:bg-cover md:bg-no-repeat bg-[length:100%_auto] bg-repeat">
+    <div id="bg" style="min-height: 100vh"
+        class="flex justify-center md:bg-cover md:bg-no-repeat bg-[length:100%_auto] bg-repeat">
         <div style="width: 600px;height: auto;"
             class="bg-[#ffffffe3] shadow-lg rounded px-8 pt-6 pb-8 mb-4 mx-4 self-center">
             <h1 class="text-3xl text-center mb-4">New Recipe</h1>
@@ -51,7 +52,8 @@
                     <small class="text-sm">Enter an ingredient and press the 'Enter' key.</small>
                 </div>
                 <div class="flex items-center">
-                    <button :disabled="isPosted" class="mr-4 bg-blue-500 disabled:bg-blue-300 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded"
+                    <button :disabled="isPosted"
+                        class="mr-4 bg-blue-500 disabled:bg-blue-300 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded"
                         type="submit">
                         Submit
                     </button>
@@ -66,8 +68,8 @@
 </template>
 
 <script>
-import User from '@/datastore/User';
-import Recipe from '@/datastore/Recipe';
+import User from '@/data-store/User';
+import Recipe from '@/data-store/Recipe';
 import Validation from '@/Validation';
 
 
@@ -169,4 +171,4 @@ export default {
 #bg {
     background-image: v-bind("bgImage");
 }
-</style>
+</style>@/data-store/User@/data-store/Recipe
