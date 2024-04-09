@@ -44,7 +44,8 @@
                         Ingredients
                     </label>
                     <ul class="pl-2 mb-4">
-                        <li v-for="(ingredient, i) of ingredients" :key="i">- {{ ingredient }}</li>
+                        <li v-for="(ingredient, i) of ingredients" :key="i">- {{ ingredient }} <button @click="removeIngredient(i)" type="button" class="ml-2"><font-awesome-icon
+                        class="text-red-500 text-sm" icon="fa-solid fa-trash" /></button></li>
                     </ul>
                     <input v-model="inputIngredient" @keydown.enter="onEnterIngredient"
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" type="text"
@@ -114,6 +115,9 @@ export default {
             this.ingredients.push(this.inputIngredient);
             this.inputIngredient = '';
 
+        },
+        removeIngredient(i){
+            this.ingredients.splice(i, 1);
         },
         submitForm() {
             if (this.checkValidation()) {
