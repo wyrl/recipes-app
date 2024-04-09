@@ -24,10 +24,6 @@ I sourced images from various online platforms, including Google Images. Please 
 
 Git played a crucial role in my development workflow. I used Git for version control, allowing me to track changes, collaborate with others, and manage codebase versions effectively.
 
-### Chatbot Integration - ChatGPT
-
-For enhancing user interactions, I integrated ChatGPT, a language model developed by OpenAI. ChatGPT powers the conversational aspects of the application, providing dynamic and engaging responses to user inputs.
-
 ## Usage Instructions
 
 ```
